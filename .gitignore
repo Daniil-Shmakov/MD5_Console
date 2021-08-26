@@ -68,3 +68,5 @@ __recovery/
 # Boss dependency manager vendor folder https://github.com/HashLoad/boss
 modules/
 MD5_PPL.res
+Win32/Debug/Test/Md5CalcTests.res
+test/

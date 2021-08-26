@@ -77,8 +77,8 @@ begin
   TThreadPool.Default.SetMaxWorkerThreads(GetThreadCount);
   SetLength(TaskList, TThreadPool.Default.MaxWorkerThreads);
 
-  // Добавить к имени каталога конечный слэш, если он отсутствует
-  FDirname := IncludeTrailingPathDelimiter(FDirname);
+  // Добавить к полному имени каталога конечный слэш, если он отсутствует
+  FDirname := TPath.GetFullPath(IncludeTrailingPathDelimiter(FDirname));
   // обрабатываем все файлы, кроме каталогов
   Attr := faAnyFile - faDirectory;
 
